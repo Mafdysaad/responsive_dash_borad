@@ -11,14 +11,12 @@ class ExpensesHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
-          child: Text(
-            'All Expenses',
-            style: Fontstyle.Montserrat_SemiBold20,
-          ),
+        Text(
+          'All Expenses',
+          style: Fontstyle.Montserrat_SemiBold20,
         ),
-        const Spacer(),
-        const Expanded(child: MonthlyRange())
+        const Expanded(child: SizedBox()),
+        const MonthlyRange()
       ],
     );
   }

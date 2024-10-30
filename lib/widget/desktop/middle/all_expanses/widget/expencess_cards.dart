@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:responsive_dashboard/model/expances_datiles.dart';
+import 'package:responsive_dashboard/model/expences_datiles.dart';
 
 import 'package:responsive_dashboard/utils/app_images.dart';
 
@@ -46,19 +46,25 @@ class _ExpensescardState extends State<Expenses_Card> {
             padding: index == 1
                 ? const EdgeInsets.symmetric(horizontal: 12)
                 : const EdgeInsets.symmetric(horizontal: 0),
-            child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    selectindex = index;
-                  });
-                },
-                child: AnimatedCrossFade(
-                    firstChild: Active_card(Expences: value),
-                    secondChild: InActive_card(Expences: value),
-                    crossFadeState: selectindex == index
-                        ? CrossFadeState.showFirst
-                        : CrossFadeState.showSecond,
-                    duration: const Duration(milliseconds: 100))),
+            child: AnimatedCrossFade(
+                firstChild: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectindex = index;
+                      });
+                    },
+                    child: Active_card(Expences: value)),
+                secondChild: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectindex = index;
+                      });
+                    },
+                    child: InActive_card(Expences: value)),
+                crossFadeState: selectindex == index
+                    ? CrossFadeState.showFirst
+                    : CrossFadeState.showSecond,
+                duration: const Duration(milliseconds: 100)),
           ),
         );
       }).toList(),

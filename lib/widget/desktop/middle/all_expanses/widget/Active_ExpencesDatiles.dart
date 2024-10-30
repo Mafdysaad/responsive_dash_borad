@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/model/expances_datiles.dart';
+import 'package:responsive_dashboard/model/expences_datiles.dart';
 import 'package:responsive_dashboard/utils/fontstyle.dart';
 import 'package:responsive_dashboard/widget/desktop/middle/all_expanses/widget/expencess_item_header.dart';
 
@@ -18,23 +18,26 @@ class ActiveExpencesdatiles extends StatelessWidget {
         const SizedBox(
           height: 34,
         ),
-        Text(
-          Expances.title,
-          style: Fontstyle.Active_Montserrat_semiBold16,
+        FittedBox(
+          child: Text(
+            Expances.title,
+            style: Fontstyle.Active_Montserrat_semiBold16,
+          ),
         ),
-        const SizedBox(
-          height: 8,
-        ),
-        Text(
-          Expances.subtitle,
-          style: Fontstyle.Active_Montserrat_regular14,
+        FittedBox(
+          child: Text(
+            Expances.subtitle,
+            style: Fontstyle.Active_Montserrat_regular14,
+          ),
         ),
         const SizedBox(
           height: 16,
         ),
-        Text(
-          Expances.price,
-          style: Fontstyle.Active_Montserrat_SemiBold24,
+        FittedBox(
+          child: Text(
+            Expances.price,
+            style: Fontstyle.Active_Montserrat_SemiBold24,
+          ),
         ),
       ],
     );

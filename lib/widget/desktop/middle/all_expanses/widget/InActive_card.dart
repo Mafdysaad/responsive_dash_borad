@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/model/expances_datiles.dart';
+import 'package:responsive_dashboard/model/expences_datiles.dart';
 import 'package:responsive_dashboard/widget/desktop/middle/all_expanses/widget/inActive_ExpencesDatiles.dart';
 
 class InActive_card extends StatelessWidget {

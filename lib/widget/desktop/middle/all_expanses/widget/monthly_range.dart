@@ -8,6 +8,7 @@ class MonthlyRange extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(12),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -15,25 +16,24 @@ class MonthlyRange extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Row(
-          children: [
-            const Text(
-              'Monthly',
-              style: TextStyle(
-                color: Color(0xFF064060),
-                fontSize: 16,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.w500,
-              ),
+      child: Row(
+        children: [
+          const Text(
+            'Monthly',
+            style: TextStyle(
+              color: Color(0xFF064060),
+              fontSize: 16,
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.w500,
             ),
-            const Spacer(),
-            Transform.rotate(
-                angle: -1.5708,
-                child: const Icon(Icons.arrow_back_ios_new_outlined))
-          ],
-        ),
+          ),
+          const SizedBox(
+            width: 18,
+          ),
+          Transform.rotate(
+              angle: -1.5708,
+              child: const Icon(Icons.arrow_back_ios_new_outlined))
+        ],
       ),
     );
   }

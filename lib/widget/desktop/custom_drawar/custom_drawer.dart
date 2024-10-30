@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/model/item.dart';
+import 'package:responsive_dashboard/model/user_info.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
-import 'package:responsive_dashboard/widget/desktop/custom_drawor/Active_item.dart';
-import 'package:responsive_dashboard/widget/desktop/custom_drawor/build_itme.dart';
-import 'package:responsive_dashboard/widget/desktop/custom_drawor/gallery.dart';
+import 'package:responsive_dashboard/widget/desktop/custom_drawar/widget/Active_item.dart';
+import 'package:responsive_dashboard/widget/desktop/custom_drawar/widget/build_itme.dart';
+import 'package:responsive_dashboard/widget/desktop/custom_drawar/widget/gallery.dart';
 
-import 'package:responsive_dashboard/widget/desktop/custom_drawor/user_info.dart';
+import 'package:responsive_dashboard/widget/desktop/custom_drawar/widget/user_info.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -23,6 +24,7 @@ class CustomDrawer extends StatelessWidget {
       Item('Setting system', Assets.imagesSetting),
       Item('Logout account', Assets.imagesLogout),
     ];
+
     return Container(
       color: Colors.white,
       child: CustomScrollView(
@@ -30,7 +32,13 @@ class CustomDrawer extends StatelessWidget {
           const SliverToBoxAdapter(
             child: Gallery(),
           ),
-          const SliverToBoxAdapter(child: UserInfo()),
+          const SliverToBoxAdapter(
+              child: UserInfo(
+            userinfo: UserInfo_model(
+                Image: Assets.imagesFace,
+                subtitle: 'demo@gmail.com',
+                tilte: 'Lekan Okeowo'),
+          )),
           BuildItem(
             item: item,
           ),

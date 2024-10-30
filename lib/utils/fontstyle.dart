@@ -15,7 +15,7 @@ abstract class Fontstyle {
     fontWeight: FontWeight.w400,
   );
   static TextStyle Montserrat_medium16 = const TextStyle(
-    color: Color(0xFF4EB7F2),
+    color: Color(0xFF064060),
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w500,
@@ -56,7 +56,6 @@ abstract class Fontstyle {
     fontSize: 14,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
-    height: 0,
   );
   static TextStyle Active_Montserrat_regular14 = const TextStyle(
     color: Colors.white,

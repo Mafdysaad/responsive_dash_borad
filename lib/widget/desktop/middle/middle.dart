@@ -8,16 +8,20 @@ class Middle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        SizedBox(
-          height: 30,
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 40,
+          ),
         ),
-        AllExpenses(),
-        SizedBox(height: 24),
-        Quickinvoice(),
-        SizedBox(
-          height: 32,
+        SliverToBoxAdapter(child: AllExpenses()),
+        SliverToBoxAdapter(child: SizedBox(height: 24)),
+        SliverToBoxAdapter(child: Quickinvoice()),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 32,
+          ),
         ),
       ],
     );

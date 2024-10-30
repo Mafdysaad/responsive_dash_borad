@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/model/expances_datiles.dart';
+import 'package:responsive_dashboard/model/expences_datiles.dart';
 
 class ExpencesItemheader extends StatelessWidget {
   const ExpencesItemheader(
