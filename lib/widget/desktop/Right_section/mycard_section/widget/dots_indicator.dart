@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/dotes.dart';
+import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/widget/dotes.dart';
 
 class DotsIndicator extends StatelessWidget {
   const DotsIndicator({super.key, required this.currentpageIndex});

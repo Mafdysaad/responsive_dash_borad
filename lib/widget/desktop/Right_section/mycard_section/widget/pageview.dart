@@ -1,6 +1,6 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/mycard.dart';
+import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/widget/mycard.dart';
 
 class pageView extends StatelessWidget {
   const pageView({super.key, required this.pageview});
