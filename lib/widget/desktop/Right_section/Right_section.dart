@@ -1,18 +1,29 @@
-import 'package:flutter/cupertino.dart';
-import 'package:responsive_dashboard/widget/custom_background.dart';
-import 'package:responsive_dashboard/widget/desktop/Right_section/Transaction_section/transaction_section.dart';
-import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/mycard_section.dart';
+import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/widget/desktop/Right_section/income_section/income_section.dart';
+import 'package:responsive_dashboard/widget/desktop/Right_section/mycardandtransactionsection.dart';
 
 class RightSection extends StatelessWidget {
   const RightSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Custom_background(
-      padding: 24,
-      child: Column(
-        children: [MycardSection(), const TransactionSection()],
-      ),
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+            child: SizedBox(
+          height: 40,
+        )),
+        SliverToBoxAdapter(child: Mycardandtransactionsection()),
+        SliverToBoxAdapter(
+            child: SizedBox(
+          height: 24,
+        )),
+        SliverToBoxAdapter(child: IncomeSection()),
+        SliverToBoxAdapter(
+            child: SizedBox(
+          height: 40,
+        )),
+      ],
     );
   }
 }

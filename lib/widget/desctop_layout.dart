@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dashboard/widget/desktop/Right_section/Right_section.dart';
+import 'package:responsive_dashboard/widget/desktop/Right_section/mycardandtransactionsection.dart';
+import 'package:responsive_dashboard/widget/desktop/Right_section/income_section/income_section.dart';
 import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/mycard_section.dart';
 import 'package:responsive_dashboard/widget/desktop/custom_drawar/custom_drawer.dart';
 import 'package:responsive_dashboard/widget/desktop/middle/middle.dart';
@@ -20,16 +22,16 @@ class _DesctopLayoutState extends State<DesctopLayout> {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        const Expanded(child: CustomDrawer()),
-        const SizedBox(
+        Expanded(child: CustomDrawer()),
+        SizedBox(
           width: 32,
         ),
-        const Expanded(flex: 3, child: Middle()),
-        const SizedBox(
+        Expanded(flex: 3, child: Middle()),
+        SizedBox(
           width: 24,
         ),
-        const Expanded(flex: 2, child: RightSection()),
-        const SizedBox(
+        Expanded(flex: 2, child: RightSection()),
+        SizedBox(
           width: 32,
         ),
       ],
