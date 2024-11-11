@@ -16,6 +16,7 @@ class IncomeListview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.sizeOf(context).width.toString());
     return ListView.builder(
         shrinkWrap: true,
         itemCount: list.length,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/adaptive_layout/adaptive_layout.dart';
+import 'package:responsive_dashboard/utils/size_config.dart';
 import 'package:responsive_dashboard/widget/Tablet_layout/Tablet_layout.dart';
 import 'package:responsive_dashboard/widget/desctop_layout.dart';
 import 'package:responsive_dashboard/widget/desktop/custom_drawar/custom_drawer.dart';
@@ -16,11 +17,13 @@ class _HomeState extends State<Home> {
   GlobalKey<ScaffoldState> scaffoldkey = GlobalKey();
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
-      drawer:
-          MediaQuery.sizeOf(context).width < 800 ? const CustomDrawer() : null,
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+          ? const CustomDrawer()
+          : null,
       key: scaffoldkey,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
               elevation: 0,
               backgroundColor: const Color(0xFFFAFAFA),

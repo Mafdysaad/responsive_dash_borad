@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:responsive_dashboard/widget/custom_background.dart';
+import 'package:responsive_dashboard/widget/desktop/Right_section/income_section/widget/Income_body.dart';
 import 'package:responsive_dashboard/widget/desktop/Right_section/income_section/widget/income_chart.dart';
 import 'package:responsive_dashboard/widget/desktop/Right_section/income_section/widget/income_listview.dart';
 import 'package:responsive_dashboard/widget/desktop/Right_section/income_section/widget/income_section_header.dart';
@@ -16,16 +17,7 @@ class IncomeSection extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(child: IncomeChart()),
-              SizedBox(
-                height: 24,
-              ),
-              Expanded(child: IncomeListview())
-            ],
-          )
+          Incomebody()
         ],
       ),
     );

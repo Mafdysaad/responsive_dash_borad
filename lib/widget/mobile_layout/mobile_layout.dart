@@ -11,22 +11,25 @@ class Mobile_layout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 18),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            Middle(),
-            Mycardandtransactionsection(),
-            SizedBox(
+    return Padding(
+      padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.sizeOf(context).width < 800 ? 18 : 0),
+      child: const CustomScrollView(
+        slivers: [
+          Middle(),
+          SliverToBoxAdapter(child: Mycardandtransactionsection()),
+          SliverToBoxAdapter(
+            child: SizedBox(
               height: 23,
             ),
-            IncomeSection(),
-            SizedBox(
+          ),
+          SliverToBoxAdapter(child: IncomeSection()),
+          SliverToBoxAdapter(
+            child: SizedBox(
               height: 23,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

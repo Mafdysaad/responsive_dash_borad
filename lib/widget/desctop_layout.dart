@@ -26,7 +26,7 @@ class _DesctopLayoutState extends State<DesctopLayout> {
         SizedBox(
           width: 32,
         ),
-        Expanded(flex: 3, child: Middle()),
+        Expanded(flex: 3, child: CustomScrollView(slivers: [Middle()])),
         SizedBox(
           width: 24,
         ),
