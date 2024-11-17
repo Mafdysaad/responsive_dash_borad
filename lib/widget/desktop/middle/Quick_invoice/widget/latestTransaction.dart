@@ -12,7 +12,7 @@ class LatestTransaction extends StatelessWidget {
       children: [
         Text(
           'Latest Transaction',
-          style: Fontstyle.Montserrat_medium16,
+          style: Fontstyle.Montserrat_medium16(context),
         ),
         const SizedBox(
           height: 12,

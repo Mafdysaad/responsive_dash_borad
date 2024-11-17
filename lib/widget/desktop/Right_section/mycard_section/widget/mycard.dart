@@ -25,13 +25,13 @@ class Mycard extends StatelessWidget {
                   const EdgeInsets.only(right: 31, left: 45, top: 20),
               title: Text(
                 'Name card',
-                style: Fontstyle.Montserrat_regular16.copyWith(
-                    color: Colors.white),
+                style: Fontstyle.Montserrat_regular16(context)
+                    .copyWith(color: Colors.white),
               ),
               subtitle: Text(
                 'Syah Bandi',
-                style:
-                    Fontstyle.Montserrat_medium20.copyWith(color: Colors.white),
+                style: Fontstyle.Montserrat_medium20(context)
+                    .copyWith(color: Colors.white),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
@@ -43,13 +43,13 @@ class Mycard extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style: Fontstyle.Montserrat_SemiBold24.copyWith(
-                        color: Colors.white),
+                    style: Fontstyle.Montserrat_SemiBold24(context)
+                        .copyWith(color: Colors.white),
                   ),
                   Text(
                     '12/20 - 124',
-                    style: Fontstyle.Montserrat_regular16.copyWith(
-                        color: Colors.white),
+                    style: Fontstyle.Montserrat_regular16(context)
+                        .copyWith(color: Colors.white),
                   )
                 ],
               ),

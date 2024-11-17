@@ -21,7 +21,7 @@ class ActiveItem extends StatelessWidget {
               leading: SvgPicture.asset(item.Image),
               title: Text(
                 item.Title,
-                style: Fontstyle.Montserrat_Bold16,
+                style: Fontstyle.Montserrat_Bold16(context),
               ),
             ),
           )
@@ -31,7 +31,7 @@ class ActiveItem extends StatelessWidget {
               leading: SvgPicture.asset(item.Image),
               title: Text(
                 item.Title,
-                style: Fontstyle.Montserrat_regular16,
+                style: Fontstyle.Montserrat_regular16(context),
               ),
             ),
           );

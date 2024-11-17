@@ -12,7 +12,7 @@ class Customdropdown extends StatelessWidget {
       children: [
         Text(
           '',
-          style: Fontstyle.Montserrat_medium16,
+          style: Fontstyle.Montserrat_medium16(context),
         ),
         const SizedBox(
           height: 12,
@@ -29,7 +29,7 @@ class Customdropdown extends StatelessWidget {
             const DropdownMenuEntry(value: r'$1400', label: r'$1300'),
           ],
           inputDecorationTheme: InputDecorationTheme(
-              hintStyle: Fontstyle.Montserrat_regular16.copyWith(
+              hintStyle: Fontstyle.Montserrat_regular16(context).copyWith(
                 color: const Color(0xFFAAAAAA),
               ),
               fillColor: const Color(0xFFFAFAFA),

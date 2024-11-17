@@ -22,11 +22,11 @@ class UserInfo extends StatelessWidget {
           leading: SvgPicture.asset(userinfo.Image),
           title: Text(
             userinfo.tilte,
-            style: Fontstyle.Montserrat_semiBold16,
+            style: Fontstyle.Montserrat_semiBold16(context),
           ),
           subtitle: Text(
             userinfo.subtitle,
-            style: Fontstyle.Montserrat_regular12,
+            style: Fontstyle.Montserrat_regular12(context),
           ),
         ),
       ),

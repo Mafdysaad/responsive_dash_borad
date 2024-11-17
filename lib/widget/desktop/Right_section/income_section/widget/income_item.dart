@@ -21,10 +21,10 @@ class IncomeItem extends StatelessWidget {
         ),
         title: Text(
           incomemodel.title,
-          style: Fontstyle.Montserrat_regular16,
+          style: Fontstyle.Montserrat_regular16(context),
         ),
         trailing: Text(incomemodel.value,
-            style: Fontstyle.Montserrat_medium16.copyWith(
+            style: Fontstyle.Montserrat_medium16(context).copyWith(
               color: const Color(0xFF208CC8),
             )),
       ),

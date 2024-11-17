@@ -21,13 +21,13 @@ class ActiveExpencesdatiles extends StatelessWidget {
         FittedBox(
           child: Text(
             Expances.title,
-            style: Fontstyle.Active_Montserrat_semiBold16,
+            style: Fontstyle.Active_Montserrat_semiBold16(context),
           ),
         ),
         FittedBox(
           child: Text(
             Expances.subtitle,
-            style: Fontstyle.Active_Montserrat_regular14,
+            style: Fontstyle.Active_Montserrat_regular14(context),
           ),
         ),
         const SizedBox(
@@ -36,7 +36,7 @@ class ActiveExpencesdatiles extends StatelessWidget {
         FittedBox(
           child: Text(
             Expances.price,
-            style: Fontstyle.Active_Montserrat_SemiBold24,
+            style: Fontstyle.Active_Montserrat_SemiBold24(context),
           ),
         ),
       ],

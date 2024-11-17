@@ -13,7 +13,7 @@ class ExpensesHeader extends StatelessWidget {
       children: [
         Text(
           'All Expenses',
-          style: Fontstyle.Montserrat_SemiBold20,
+          style: Fontstyle.Montserrat_SemiBold20(context),
         ),
         const Expanded(child: SizedBox()),
         const MonthlyRange()

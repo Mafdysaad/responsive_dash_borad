@@ -16,7 +16,7 @@ class TransactionSection extends StatelessWidget {
           height: 20,
         ),
         Text('13 April 2022',
-            style: Fontstyle.Montserrat_medium16.copyWith(
+            style: Fontstyle.Montserrat_medium16(context).copyWith(
               color: const Color(0xFFAAAAAA),
             )),
         const SizedBox(

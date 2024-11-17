@@ -13,7 +13,7 @@ class Customtextefiled extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Fontstyle.Montserrat_medium16,
+          style: Fontstyle.Montserrat_medium16(context),
         ),
         const SizedBox(
           height: 12,
@@ -21,7 +21,7 @@ class Customtextefiled extends StatelessWidget {
         TextField(
           decoration: InputDecoration(
               hintText: hint,
-              hintStyle: Fontstyle.Montserrat_regular16.copyWith(
+              hintStyle: Fontstyle.Montserrat_regular16(context).copyWith(
                 color: const Color(0xFFAAAAAA),
               ),
               fillColor: const Color(0xFFFAFAFA),

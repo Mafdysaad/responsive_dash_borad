@@ -13,7 +13,7 @@ class IncomeSectionHeader extends StatelessWidget {
       children: [
         Text(
           'Income',
-          style: Fontstyle.Montserrat_SemiBold20,
+          style: Fontstyle.Montserrat_SemiBold20(context),
         ),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -26,7 +26,7 @@ class IncomeSectionHeader extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Text('Monthly', style: Fontstyle.Montserrat_medium16),
+              Text('Monthly', style: Fontstyle.Montserrat_medium16(context)),
               const SizedBox(
                 width: 16,
               ),

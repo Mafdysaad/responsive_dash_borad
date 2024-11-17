@@ -24,7 +24,8 @@ class CustomButton extends StatelessWidget {
           onPressed: () {},
           child: Text(
             title,
-            style: Fontstyle.Montserrat_semiBold18.copyWith(color: text_color),
+            style: Fontstyle.Montserrat_semiBold18(context)
+                .copyWith(color: text_color),
           )),
     );
   }
