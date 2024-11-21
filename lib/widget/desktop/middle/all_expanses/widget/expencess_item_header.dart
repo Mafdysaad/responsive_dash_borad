@@ -17,19 +17,27 @@ class ExpencesItemheader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          decoration: ShapeDecoration(
-            color: Imagebackground_color ??
-                Colors.white.withOpacity(0.10000000149011612),
-            shape: const OvalBorder(),
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 60),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                decoration: ShapeDecoration(
+                  color: Imagebackground_color ??
+                      Colors.white.withOpacity(0.10000000149011612),
+                  shape: const OvalBorder(),
+                ),
+                child: Center(
+                    child: SvgPicture.asset(
+                  Expances.image,
+                  // color: color == null ? const Color(0x4EB7F2) : Colors.white,
+                  colorFilter: ColorFilter.mode(
+                      Image_color ?? Colors.white, BlendMode.srcIn),
+                )),
+              ),
+            ),
           ),
-          child: Center(
-              child: SvgPicture.asset(
-            Expances.image,
-            // color: color == null ? const Color(0x4EB7F2) : Colors.white,
-            colorFilter:
-                ColorFilter.mode(Image_color ?? Colors.white, BlendMode.srcIn),
-          )),
         ),
         const Spacer(),
         Transform.rotate(

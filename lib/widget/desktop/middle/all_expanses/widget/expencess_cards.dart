@@ -36,38 +36,76 @@ class _ExpensescardState extends State<Expenses_Card> {
   int selectindex = 0;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: expences.asMap().entries.map((e) {
-        int index = e.key;
-        var value = e.value;
-
-        return Expanded(
-          child: Padding(
-            padding: index == 1
-                ? const EdgeInsets.symmetric(horizontal: 12)
-                : const EdgeInsets.symmetric(horizontal: 0),
-            child: AnimatedCrossFade(
-                firstChild: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectindex = index;
-                      });
-                    },
-                    child: Active_card(Expences: value)),
-                secondChild: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectindex = index;
-                      });
-                    },
-                    child: InActive_card(Expences: value)),
-                crossFadeState: selectindex == index
-                    ? CrossFadeState.showFirst
-                    : CrossFadeState.showSecond,
-                duration: const Duration(milliseconds: 100)),
-          ),
-        );
-      }).toList(),
-    );
+    return Row(children: [
+      Expanded(
+        child: AnimatedCrossFade(
+            firstChild: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectindex = 0;
+                  });
+                },
+                child: Active_card(Expences: expences[0])),
+            secondChild: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectindex = 0;
+                  });
+                },
+                child: InActive_card(Expences: expences[0])),
+            crossFadeState: selectindex == 0
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            duration: const Duration(milliseconds: 100)),
+      ),
+      const SizedBox(
+        width: 10,
+      ),
+      Expanded(
+        child: AnimatedCrossFade(
+            firstChild: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectindex = 1;
+                  });
+                },
+                child: Active_card(Expences: expences[1])),
+            secondChild: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectindex = 1;
+                  });
+                },
+                child: InActive_card(Expences: expences[1])),
+            crossFadeState: selectindex == 1
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            duration: const Duration(milliseconds: 100)),
+      ),
+      const SizedBox(
+        width: 10,
+      ),
+      Expanded(
+        child: AnimatedCrossFade(
+            firstChild: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectindex = 2;
+                  });
+                },
+                child: Active_card(Expences: expences[2])),
+            secondChild: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectindex = 2;
+                  });
+                },
+                child: InActive_card(Expences: expences[2])),
+            crossFadeState: selectindex == 2
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            duration: const Duration(milliseconds: 100)),
+      )
+    ]);
   }
 }
