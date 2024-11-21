@@ -1,81 +1,75 @@
+import 'dart:developer';
+
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/fontstyle.dart';
 
-class IncomeDetailedChart extends StatefulWidget {
-  const IncomeDetailedChart({super.key});
+class DetailedIncomeChart extends StatefulWidget {
+  const DetailedIncomeChart({super.key});
 
   @override
-  State<IncomeDetailedChart> createState() => _IncomeChartState();
+  State<DetailedIncomeChart> createState() => _DetailedIncomeChartState();
 }
 
-class _IncomeChartState extends State<IncomeDetailedChart> {
-  int currntIndex = -1;
+class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
+  int activeIndex = -1;
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 1, child: PieChart(getData()));
+    return AspectRatio(
+      aspectRatio: 1,
+      child: PieChart(getChartData()),
+    );
   }
 
-  PieChartData getData() {
+  PieChartData getChartData() {
     return PieChartData(
-        pieTouchData: PieTouchData(
-          enabled: true,
-          touchCallback: (pietouchevent, pietouchResponse) {
-            currntIndex = pietouchResponse!.touchedSection!.touchedSectionIndex;
-            setState(() {});
-          },
+      pieTouchData: PieTouchData(
+        enabled: true,
+        touchCallback: (p0, pietouchResponse) {
+          activeIndex =
+              pietouchResponse?.touchedSection?.touchedSectionIndex ?? -1;
+          setState(() {});
+        },
+      ),
+      sectionsSpace: 0,
+      sections: [
+        PieChartSectionData(
+          titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
+          title: activeIndex == 0 ? 'Design service' : '40%',
+          titleStyle: Fontstyle.Montserrat_medium16(context)
+              .copyWith(color: activeIndex == 0 ? null : Colors.white),
+          radius: activeIndex == 0 ? 60 : 50,
+          value: 40,
+          color: const Color(0xFF208BC7),
         ),
-        sectionsSpace: 0,
-        sections: [
-          PieChartSectionData(
-            radius: currntIndex == 0 ? 60 : 50,
-            title: currntIndex == 0 ? 'Design service' : '40%',
-            titleStyle: currntIndex == 0
-                ? Fontstyle.Montserrat_Bold16(context)
-                    .copyWith(color: Colors.black)
-                : Fontstyle.Montserrat_Bold16(context)
-                    .copyWith(color: Colors.white),
-            value: 40,
-            titlePositionPercentageOffset: currntIndex == 0 ? 1.5 : null,
-            color: const Color(0xFF208BC7),
-          ),
-          PieChartSectionData(
-            radius: currntIndex == 1 ? 60 : 50,
-            title: currntIndex == 1 ? 'Design product' : '25%',
-            titlePositionPercentageOffset: currntIndex == 1 ? 1.2 : null,
-            titleStyle: currntIndex == 1
-                ? Fontstyle.Montserrat_Bold16(context)
-                    .copyWith(color: Colors.black)
-                : Fontstyle.Montserrat_Bold16(context)
-                    .copyWith(color: Colors.white),
-            value: 25,
-            color: const Color(0xFF4DB7F2),
-          ),
-          PieChartSectionData(
-            titlePositionPercentageOffset: currntIndex == 2 ? 1.4 : null,
-            radius: currntIndex == 2 ? 60 : 50,
-            title: currntIndex == 2 ? 'Product royalti' : '20%',
-            titleStyle: currntIndex == 2
-                ? Fontstyle.Montserrat_Bold16(context)
-                    .copyWith(color: Colors.black)
-                : Fontstyle.Montserrat_Bold16(context)
-                    .copyWith(color: Colors.white),
-            value: 20,
-            color: const Color(0xFF064060),
-          ),
-          PieChartSectionData(
-            titlePositionPercentageOffset: currntIndex == 3 ? 0.8 : null,
-            radius: currntIndex == 3 ? 60 : 50,
-            title: currntIndex == 3 ? 'Other' : '22%',
-            titleStyle: currntIndex == 3
-                ? Fontstyle.Montserrat_Bold16(context)
-                    .copyWith(color: Colors.black)
-                : Fontstyle.Montserrat_Bold16(context)
-                    .copyWith(color: Colors.white),
-            value: 22,
-            color: const Color(0xFFE2DECD),
-          ),
-        ]);
+        PieChartSectionData(
+          titlePositionPercentageOffset: activeIndex == 1 ? 2.2 : null,
+          titleStyle: Fontstyle.Montserrat_medium16(context)
+              .copyWith(color: activeIndex == 1 ? null : Colors.white),
+          title: activeIndex == 1 ? 'Design product' : '25%',
+          value: 25,
+          radius: activeIndex == 1 ? 60 : 50,
+          color: const Color(0xFF4DB7F2),
+        ),
+        PieChartSectionData(
+          titlePositionPercentageOffset: activeIndex == 2 ? 1.4 : null,
+          titleStyle: Fontstyle.Montserrat_medium16(context)
+              .copyWith(color: activeIndex == 2 ? null : Colors.white),
+          title: activeIndex == 2 ? 'Product royalti' : '20%',
+          value: 20,
+          radius: activeIndex == 2 ? 60 : 50,
+          color: const Color(0xFF064060),
+        ),
+        PieChartSectionData(
+          titlePositionPercentageOffset: activeIndex == 3 ? 1.4 : null,
+          titleStyle: Fontstyle.Montserrat_medium16(context)
+              .copyWith(color: activeIndex == 3 ? null : Colors.white),
+          title: activeIndex == 3 ? 'Other' : '22%',
+          value: 22,
+          radius: activeIndex == 3 ? 60 : 50,
+          color: const Color(0xFFE2DECD),
+        ),
+      ],
+    );
   }
 }

@@ -3,7 +3,7 @@ import 'package:responsive_dashboard/widget/desktop/Right_section/Right_section.
 import 'package:responsive_dashboard/widget/desktop/Right_section/income_section/income_section.dart';
 import 'package:responsive_dashboard/widget/desktop/Right_section/mycardandtransactionsection.dart';
 import 'package:responsive_dashboard/widget/desktop/custom_drawar/custom_drawer.dart';
-import 'package:responsive_dashboard/widget/desktop/middle/middle.dart';
+import 'package:responsive_dashboard/widget/desktop/middle/Quickandallexpenses.dart';
 import 'package:responsive_dashboard/widget/mobile_layout/mobile_layout.dart';
 
 class TabletLayout extends StatelessWidget {
@@ -17,7 +17,7 @@ class TabletLayout extends StatelessWidget {
         SizedBox(
           width: 32,
         ),
-        Expanded(flex: 3, child: Mobile_layout()),
+        Expanded(flex: 2, child: Mobile_layout()),
         SizedBox(
           width: 32,
         ),

@@ -24,6 +24,7 @@ class IncomeItem extends StatelessWidget {
           style: Fontstyle.Montserrat_regular16(context),
         ),
         trailing: Text(incomemodel.value,
+            overflow: TextOverflow.ellipsis,
             style: Fontstyle.Montserrat_medium16(context).copyWith(
               color: const Color(0xFF208CC8),
             )),

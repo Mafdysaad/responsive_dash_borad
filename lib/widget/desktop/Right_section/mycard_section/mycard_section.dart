@@ -1,13 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/fontstyle.dart';
-import 'package:responsive_dashboard/widget/custom_background.dart';
-import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/widget/dotes.dart';
+
 import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/widget/dots_indicator.dart';
 import 'package:responsive_dashboard/widget/desktop/Right_section/mycard_section/widget/pageview.dart';
 
 class MycardSection extends StatefulWidget {
-  MycardSection({super.key});
+  const MycardSection({super.key});
 
   @override
   State<MycardSection> createState() => _MycardSectionState();

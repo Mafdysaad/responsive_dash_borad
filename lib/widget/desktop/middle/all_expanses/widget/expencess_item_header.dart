@@ -18,8 +18,6 @@ class ExpencesItemheader extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 60,
-          height: 60,
           decoration: ShapeDecoration(
             color: Imagebackground_color ??
                 Colors.white.withOpacity(0.10000000149011612),

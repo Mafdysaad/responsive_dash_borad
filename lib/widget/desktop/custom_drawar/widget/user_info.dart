@@ -20,13 +20,21 @@ class UserInfo extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(12))),
         child: ListTile(
           leading: SvgPicture.asset(userinfo.Image),
-          title: Text(
-            userinfo.tilte,
-            style: Fontstyle.Montserrat_semiBold16(context),
+          title: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.topStart,
+            child: Text(
+              userinfo.tilte,
+              style: Fontstyle.Montserrat_semiBold16(context),
+            ),
           ),
-          subtitle: Text(
-            userinfo.subtitle,
-            style: Fontstyle.Montserrat_regular12(context),
+          subtitle: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.topStart,
+            child: Text(
+              userinfo.subtitle,
+              style: Fontstyle.Montserrat_regular12(context),
+            ),
           ),
         ),
       ),

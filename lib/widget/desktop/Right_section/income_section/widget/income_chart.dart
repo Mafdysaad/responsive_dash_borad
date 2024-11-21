@@ -28,25 +28,25 @@ class _IncomeChartState extends State<IncomeChart> {
         sectionsSpace: 0,
         sections: [
           PieChartSectionData(
-            radius: currntIndex == 0 ? 60 : 50,
+            radius: currntIndex == 0 ? 40 : 30,
             showTitle: false,
             value: 40,
             color: const Color(0xFF208BC7),
           ),
           PieChartSectionData(
-            radius: currntIndex == 1 ? 60 : 50,
+            radius: currntIndex == 1 ? 40 : 30,
             showTitle: false,
             value: 25,
             color: const Color(0xFF4DB7F2),
           ),
           PieChartSectionData(
-            radius: currntIndex == 2 ? 60 : 50,
+            radius: currntIndex == 2 ? 40 : 30,
             showTitle: false,
             value: 20,
             color: const Color(0xFF064060),
           ),
           PieChartSectionData(
-            radius: currntIndex == 3 ? 60 : 50,
+            radius: currntIndex == 3 ? 40 : 30,
             showTitle: false,
             value: 22,
             color: const Color(0xFFE2DECD),

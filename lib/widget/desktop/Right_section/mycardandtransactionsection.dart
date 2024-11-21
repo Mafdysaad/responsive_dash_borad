@@ -8,10 +8,10 @@ class Mycardandtransactionsection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Custom_background(
+    return const Custom_background(
       padding: 24,
       child: Column(
-        children: [MycardSection(), const TransactionSection()],
+        children: [MycardSection(), TransactionSection()],
       ),
     );
   }

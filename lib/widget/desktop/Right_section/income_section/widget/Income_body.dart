@@ -11,22 +11,16 @@ class Incomebody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    return width < 1350 && width > 1200
-        ? const Padding(
-            padding: EdgeInsets.all(60),
-            child: Row(
-              children: [
-                Expanded(child: IncomeDetailedChart()),
-              ],
-            ),
+    return width < 1350 && width > 1300
+        ? const Row(
+            children: [
+              Expanded(child: DetailedIncomeChart()),
+            ],
           )
         : const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(child: IncomeChart()),
-              SizedBox(
-                height: 24,
-              ),
               Expanded(flex: 2, child: IncomeListview())
             ],
           );
