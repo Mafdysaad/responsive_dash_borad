@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:responsive_dashboard/utils/responsive_size.dart';
 
 abstract class Fontstyle {

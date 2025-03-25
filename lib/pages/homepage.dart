@@ -15,9 +15,10 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   GlobalKey<ScaffoldState> scaffoldkey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
-    SizeConfig.init(context);
+    //SizeConfig.init(context);
     return Scaffold(
       drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? const CustomDrawer()
